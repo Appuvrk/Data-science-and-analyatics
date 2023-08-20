@@ -1,0 +1,57 @@
+import os 
+import warnings
+warnings.filterwarnings('ignore')
+
+import numpy as np
+import pandas as pd
+from pandas import Series, DataFrame
+import pandas_profiling
+import scipy.stats as stats
+
+import seaborn as sns
+import matplotlib.pyplot as plt
+%matplotlib inline
+
+
+plt.rc("font", size=14)
+plt.rcParams['axes.grid'] = True
+plt.figure(figsize=(6,3))
+plt.gray()
+
+from matplotlib.backends.backend_pdf import PdfPages
+
+from sklearn.model_selection import train_test_split, GridSearchCV
+
+
+from sklearn import metrics
+
+from statsmodels.stats.outliers_influence import variance_inflation_factor
+
+from sklearn.impute import MissingIndicator, SimpleImputer
+from sklearn.preprocessing import  PolynomialFeatures, KBinsDiscretizer, FunctionTransformer
+from sklearn.preprocessing import StandardScaler, MinMaxScaler, MaxAbsScaler
+from sklearn.preprocessing import LabelEncoder, OneHotEncoder, LabelBinarizer, OrdinalEncoder
+from sklearn import preprocessing
+
+from sklearn.feature_selection import RFE, RFECV, SelectKBest, chi2, SelectPercentile, f_classif, mutual_info_classif, f_regression, VarianceThreshold, SelectFromModel, mutual_info_classif, mutual_info_regression, SelectFpr, SelectFdr, SelectFwe
+
+from sklearn.pipeline import Pipeline
+from sklearn.pipeline import FeatureUnion
+from sklearn.model_selection import train_test_split
+
+import joblib
+
+import statsmodels.formula.api as smf
+import statsmodels.tsa as tsa
+
+from sklearn.linear_model import LogisticRegression, LinearRegression, ElasticNet, Lasso, Ridge
+from sklearn.neighbors import KNeighborsClassifier, KNeighborsRegressor
+from sklearn.tree import DecisionTreeClassifier, DecisionTreeRegressor, export_graphviz
+from sklearn.ensemble import BaggingClassifier, BaggingRegressor,RandomForestClassifier,RandomForestRegressor
+from sklearn.ensemble import GradientBoostingClassifier,GradientBoostingRegressor, AdaBoostClassifier, AdaBoostRegressor 
+
+from sklearn.naive_bayes import BernoulliNB, MultinomialNB, GaussianNB
+from sklearn.svm import LinearSVC, LinearSVR, SVC, SVR
+from sklearn.neural_network import MLPClassifier, MLPRegressor
+pip install pandas-profiling
+pip install preprocessing
