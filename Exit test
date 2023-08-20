@@ -55,3 +55,9 @@ from sklearn.svm import LinearSVC, LinearSVR, SVC, SVR
 from sklearn.neural_network import MLPClassifier, MLPRegressor
 pip install pandas-profiling
 pip install preprocessing
+train_data=pd.read_csv("Train.csv")
+print("Shape of Training Dataset:", train_data.shape)
+pd.set_option('display.max_rows', 500)
+pd.set_option('display.max_columns', 500)
+pd.set_option('display.width', 1000)
+train_data
